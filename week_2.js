@@ -1,4 +1,4 @@
-/* var x=10
+var x=10
 var y='9'
 var z='a'
 //it will have string concatenate with '+' sign 
@@ -17,11 +17,11 @@ console.log(o)      //variable
 console.log(window.o)   //property
 console.log(window)     //window
 
-let a=9
-let b='9'
-console.log(a==b) //true
-console.log(a===b)//false
-*/
+//let a =9
+//let b ='9'
+//console.log(a==b) //true
+//console.log(a===b)//false
+
 
 
 /*function set(){

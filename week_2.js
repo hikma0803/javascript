@@ -1,4 +1,4 @@
-/* var x=10
+var x=10
 var y='9'
 var z='a'
 //it will have string concatenate with '+' sign 
@@ -17,20 +17,19 @@ console.log(o)      //variable
 console.log(window.o)   //property
 console.log(window)     //window
 
-let a=9
-let b='9'
-console.log(a==b) //true
-console.log(a===b)//false
-*/
+//let a =9
+//let b ='9'
+//console.log(a==b) //true
+//console.log(a===b)//false
 
 
-/*function set(){
+function set(){
     setInterval(()=>{console.log('executed')},100)
     setTimeout(()=>{console.log('executed')},100)
 }
 set()*/
 
-/*let a = [2, 3, 4];
+let a = [2, 3, 4];
 let b = [2, 2, ...a, 5]; //spread operator ...a 
 let c = b.find(x => x % 2); //if return true(1),return first oddd number
 console.log(c);
@@ -69,12 +68,12 @@ let kj={
 kj.norm()       //here, the functioned is called by object
 kj.arrow()      //returns window
 
-*/
+
 
 
 
 //IN GLOBAL SCOPE ONLY
-/*let a=10                //create variable,block scoped
+let a=10                //create variable,block scoped
 console.log(window.a)   //does not create window property
 
 const b=10                //create variable,block scoped
@@ -94,7 +93,7 @@ let obj={
 obj.func(20)
 
 console.log(this.x,'and',obj.x,'and',x)
-*/
+
 
 const obj = {
    name: 'Rohit',
@@ -111,24 +110,24 @@ obj.normalfunction()
 //obj.arrowFunction()
 console.log(obj.arrowFunction)
 
-// const a = {
-//          'x1': 10,
-//          func1: function () {
-//              console.log(this.x1);
-//          }
-//       }
-//       const b = {
-//           'x1': 20,
-//           func2: function () {
-//               c = a.func1;
-//               c.call();   //call, bind, apply function.call(context)
-//           }
-//       }
+const a = {
+         'x1': 10,
+         func1: function () {
+             console.log(this.x1);
+         }
+      }
+      const b = {
+          'x1': 20,
+          func2: function () {
+              c = a.func1;
+              c.call();   //call, bind, apply function.call(context)
+          }
+      }
     
-    //  const obj3 = {
-    //   }
-    //  x1: 20
+     const obj3 = {
+      }
+     x1: 20
     
     
-// b.func2();
+b.func2();
     

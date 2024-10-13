@@ -131,3 +131,74 @@ const a = {
     
 b.func2();
     
+
+Question
+
+const obj = {
+    name2: "Test Object",
+    regularFunc: function () {
+        console.log(this.name2);
+    },
+    arrowFunc: () => {
+        console.log(this.name2);
+    }
+};
+
+const outerObj = {
+    name2: "Outer Object",
+    method: obj.arrowFunc
+};
+
+outerObj.method(); // What is logged?
+
+
+
+// Object
+
+let user = {
+    name: "John",
+    age: 30,
+    "likes birds": true,  // multiword property name must be quoted
+    1: 'one',
+    greeting: () => {
+        console.log('hello')
+    }
+};
+
+console.log(user['greeting'])
+
+
+for (const key in user) {
+    console.log(`key: ${key}, value: ${user[key]}`)
+}
+
+
+console.log(Object.entries(user))
+console.log(Object.keys(user))
+console.log(Object.values(user))
+
+let arr=[1,3,4,5]
+console.log(arr.length)
+console.log(user.length)//cant be directly used in objects
+console.log(Object.keys(user).length)//should be used like this for objects
+
+for (const [key, value] of Object.entries(user)) {
+    console.log(key, value)
+}
+
+fruits = ['apple', 'guava']
+
+console.log(Object.keys(user).length)
+
+
+
+let user2 = {
+    firstName: "John",
+    sayHi() {
+        console.log(`Hello, ${this.firstName}!`);
+    }
+};
+
+setTimeout(function () {
+    user2.sayHi();
+}, 1000);

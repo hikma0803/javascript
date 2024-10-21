@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue-Introduction</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+    .green{
+        background-color:green
+    }
+    .yellow{
+        background-color:red
+    }
+</style>
 </head>
-<body></body>
-<script src="week_2.js"></script>
+<body>
+    <div id="app">
+        <!-- a way of binding  -->
+        <!-- <h2 class="green">{{message}}</h2> -->
+        <h2 v-bind:class="myclass">{{message}}</h2>
+        <!-- conditional statement -->
+        <h2 v-if="seen">hi iam hikma</h2>
+        <h2 v-show="seen">hi iam hikma</h2>
+        <!-- loops in vue -->
+        <ul>
+            <li v-for="course in myarr">{{course}}</li>
+        </ul>
+        <!-- two way binding in javascript -->
+        my favourite movie <input v-model="movie" type="text">
+        <button v-on:click="logmovie">Log Movie</button>
+
+
+    </div>
+    <script src="week_3.js"></script>
+</body>
+
 </html>
